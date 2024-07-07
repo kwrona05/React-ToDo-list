@@ -1,6 +1,6 @@
 function TaskInput() {
     return(
-        <input placeholder="Enter new task"></input>
+        <input placeholder="Enter new task" className="input"></input>
     )
 }
 
