@@ -1,16 +1,22 @@
-import AddTaskBtn from './AddTaskButton'
-import './App.css'
-import TaskInput from './Input'
+import { useState } from 'react';
 
 function App() {
+  const [inputValue, setInputValue] = useState('');
+    const [text, setText] = useState('')
+    
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value)
+    }
+
+    const addTask = () => {
+        setText(inputValue)
+        setInputValue('')
+    }
   return(
     <div className="container">
-      <div className="inputDiv">
-      <TaskInput></TaskInput>
-      <AddTaskBtn></AddTaskBtn>
-      </div>
-      <div className="tile">
-      </div>
+      <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Enter Task"></input>
+      <button onClick={addTask}>Add Task</button>
+      <p>{text}</p>
     </div>
   )
 }
