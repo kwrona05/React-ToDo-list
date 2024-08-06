@@ -17,6 +17,12 @@ function App() {
       <Tile 
       title="Coding 1h"
       task="Learn Python and robotic at 5pm" />
+      <Tile 
+      title="Home"
+      task="Find out internet for home"/>
+      <Tile 
+      title="Next page"
+      task="Everything about guns"/>
     </div>
 )
 }
