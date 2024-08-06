@@ -1,24 +1,24 @@
-import { useState } from 'react';
+import React from "react"
+import Name from "./Tititle"
+import './App.css'
 
-function App() {
-  const [inputValue, setInputValue] = useState('');
-    const [text, setText] = useState('')
-    
-    const handleInputChange = (event) => {
-        setInputValue(event.target.value)
-    }
-
-    const addTask = () => {
-        setText(inputValue)
-        setInputValue('')
-    }
-  return(
-    <div className="container">
-      <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Enter Task"></input>
-      <button onClick={addTask}>Add Task</button>
-      <p>{text}</p>
-    </div>
+function Tile(props) {
+  return (
+    <div className="TaskTile">
+  <h2>{props.title}</h2>
+  <p2>{props.task}</p2>
+  </div>
   )
+}
+function App() {
+  return (
+    <div>
+      <Name />
+      <Tile 
+      title="Coding 1h"
+      task="Learn Python and robotic at 5pm" />
+    </div>
+)
 }
 
 export default App
